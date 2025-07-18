@@ -28,7 +28,7 @@ By the end of this challenge, participants will:
 
 # Mini Project Challenge Guideline
 
-You are allowed to use any AI tool that you like to achieve this Challenge also please share you techniques and tool in [NOTE.md](./NOTE.md#ai-tools-that-i-use)
+You are **allowed to use any AI** tool that you like to achieve this Challenge also please share you techniques and tool in [NOTE.md](./NOTE.md#ai-tools-that-i-use)
 
 ## Project Structure
 

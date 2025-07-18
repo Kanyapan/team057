@@ -364,9 +364,114 @@ summary: get all loan applications with pagination and filtering (pagination is 
 - Kubernetes Hands-on in 15 Minutes | https://youtu.be/r2zuL9MW6wc
 - Kubernetes Crash Course for Absolute Beginners | https://youtu.be/s_o8dwzRlu4
 
-## FAQ
+## Frequently Asked Questions (FAQ)
 - you are allow to ask **anything** about this challenge in this channel: DevTrail!: Chat Channel Arise & INFINITAS
 - you are allow to ask **for help** about this challenge in this channel: DevTrail!: Chat Channel Arise & INFINITAS
+
+### 🔧 Environment & Tooling
+
+**Q1: Can I use Docker Compose for local dev, or do I have to use Kubernetes locally?**
+✅ You can use Docker Compose for development, but your final submission **must be deployable on Colima Kubernetes** via `make k8s-deploy`.
+
+**Q2: What do I do if Colima doesn’t work on my machine?**
+✅ You can use **minikube**, **kind**, or **k3d** locally. But we will test your code on **Colima**, so make sure it works there.
+
+**Q3: Can I use any database or do I have to use PostgreSQL?**
+✅ You can use **PostgreSQL**, **MySQL**, or **MongoDB**, as long as it is containerized and exposed via NodePort `30050`.
+
+---
+
+### ⚙️ Backend Logic / API
+
+**Q4: Can I allow a monthlyIncome below 10,000 in the frontend?**
+✅ Yes. The form validation allows `>= 5,000`, but the backend eligibility logic will reject values below `10,000`.
+
+**Q5: Can I store the eligibility decision in the database?**
+✅ Yes — you **must** store the application data, eligibility status, and timestamp.
+
+**Q6: Do I have to use UUIDs for application IDs?**
+✅ Yes — application IDs must be in standard UUID format.
+
+**Q7: Does pagination on `/api/v1/loans` require filtering?**
+❌ Filtering is optional. ✅ Pagination (`page`, `limit`) is required.
+
+---
+
+### 🖼️ Frontend
+
+**Q8: Do I have to follow the sample UI design exactly?**
+❌ No. You're free to design your own UI as long as it meets functional requirements.
+
+**Q9: How should I validate fields like phone numbers and emails?**
+✅ Use standard validation:
+- Phone: 10-digit numeric only (e.g., `0851234567`)
+- Email: must follow email format (e.g., `user@example.com`)
+- All fields are required and must follow validation constraints.
+
+---
+
+### 📦 Makefile & Deployment
+
+**Q10: What should `make k8s-deploy` do exactly?**
+It should:
+- Build frontend/backend images
+- Apply Kubernetes manifests from `deploy/`
+- Ensure services are exposed on:
+  - Frontend: `30080`
+  - Backend: `30090`
+  - DB: `30050`
+
+**Q11: Do I need to include volume or PVC for the database?**
+
+✅ Yes. Use a `PersistentVolumeClaim` in your database deployment for persistent storage.
+
+---
+
+### 🧪 Testing
+
+**Q12: What tools can I use for e2e testing?**
+✅ You can use **Playwright**, **Robot Framework** — place scripts in the `e2e/` folder.
+
+**Q13: What’s the difference between smoke/load/stress/spike tests?**
+- **Smoke test**: Basic check that the app runs
+- **Load test**: Handles normal traffic (many users)
+- **Stress test**: Pushes app beyond its limits
+- **Spike test**: Sudden traffic spikes
+
+---
+
+### 📄 Docs, GPG, and Submission
+
+**Q14: How do I GPG-sign commits?**
+Follow this guide: [GPG signing](https://dev.to/anuchito/kaar-sign-gpg-kab-git-commit-3i5f)
+
+**Q15: Do I need to write anything in NOTE.md?**
+✅ Yes. You must include:
+- `#ai-tools-that-i-use`
+- `#my-learning` (your experience)
+- `#system-note` (any setup/config info)
+
+**Q16: What timezone do I use for timestamps?**
+✅ All timestamps must use **Asia/Bangkok** timezone (`UTC+7`).
+
+**Q17: Do we need to mock the email or phone validation?**
+❌ No — just validate formats. No need for real email/SMS verification.
+
+**Q18: Can we use external AI or Copilot tools?**
+✅ Yes — just document them under `NOTE.md` → `#ai-tools-that-i-use`.
+
+---
+
+### 🧠 Conceptual Clarification
+
+**Q19: Why is monthly income allowed to be >= 5,000 but not eligible until 10,000?**
+Validation (>= 5,000) ensures the input isn’t garbage.
+Eligibility (>= 10,000) is the business rule.
+This separation improves testing and UX clarity.
+
+**Q20: Can I use frameworks like Spring Boot?**
+✅ Yes — use any stack or framework that our organization uses in daily basis
+
 
 ### some conflict
 

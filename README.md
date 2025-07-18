@@ -59,7 +59,7 @@ While we may not have access to a full cloud environment, this challenge provide
 - [ ] Your application must be deployable to a colima kubernetes cluster
 - [ ] We will run `make k8s-deploy` to deploy your application to colima kubernetes
 - [ ] Ensure all components (frontend, backend, database or any cached) are properly configured to work in this environment
-- [ ] We will run against Fronend NodePort: 30080 and Backend NodePort: 30090
+- [ ] We will run against Fronend NodePort: `30080` and Backend NodePort: `30090`
 - [ ] then we will run `make smoke-test`
 - [ ] then we will run `make load-test`
 - [ ] then we will run `make stress-test`

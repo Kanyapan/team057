@@ -65,8 +65,8 @@ While we may not have access to a full cloud environment, this challenge provide
 - [ ] then we will run `make load-test`
 - [ ] then we will run `make stress-test`
 - [ ] then we will run `make spike-test`
-- [ ] then we will run `make load-web-test`
-- [ ] then we will run `make test-validate-payload`
+- [ ] then we will run `make load-web-test` you should write a simple load test for a frontend page
+- [ ] then we will run `make validate-payload-test`
 - [ ] then we will check data in database at NodePort: `30050`
 - [ ] then check the code quality
 - [ ] We will give bonus point on your learning journey through the [NOTE.md My Learning](./NOTE.md#my-learning) section, where you should document your challenges, insights, and reflections throughout the development process.
@@ -126,6 +126,7 @@ While we may not have access to a full cloud environment, this challenge provide
 - K6
     - All scripts in the `k6/` directory **MUST** run successfully without any failures or errors
     - Your application must successfully handle the standard load test without generating errors
+    - You **MUST** write a simple load test for a frontend page in file `k6/06-frontend-web.average.test.js` so that when we run `make load-web-test`, it should become pass.
 
 - E2E
     - You **MUST** provide at least one end-to-end test script in the `e2e/` directory

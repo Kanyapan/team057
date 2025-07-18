@@ -66,7 +66,7 @@ While we may not have access to a full cloud environment, this challenge provide
 - [ ] then we will run `make spike-test`
 - [ ] then we will run `make load-web-test`
 - [ ] then we will run `make test-validate-payload`
-- [ ] then we will check data in database
+- [ ] then we will check data in database at NodePort: `30050`
 - [ ] then check the code quality
 - [ ] We will give bonus point on your learning journey through the [NOTE.md My Learning](./NOTE.md#my-learning) section, where you should document your challenges, insights, and reflections throughout the development process.
 - [ ] All timestamps and date-related operations **MUST** use **"Asia/Bangkok"** timezone (UTC+7)
@@ -96,12 +96,14 @@ While we may not have access to a full cloud environment, this challenge provide
     - Standard port configuration:
       - Frontend **MUST** be accessible via NodePort: `30080`
       - Backend **MUST** be accessible via NodePort: `30090`
+      - Database **MUST** be accessible via NodePort: `30050`
       - NodePort **MUST** be explicitly defined in Kubernetes service manifests (e.g. service.yaml) with frontend using port 30080 and backend using port 30090
     - Your application **MUST** be deployable with a single command: `make k8s-deploy`
     - Frontend image: `teamXYZ-frontend`
     - Backend image: `teamXYZ-backend`
     - create a kubernetes service name `frontend-service`
     - create a kubernetes service name `backend-service`
+    - create a kubernetes service name `database-service`
     - Kubernetes manifests files **MUST** be organized according to the project structure defined
 
 ```

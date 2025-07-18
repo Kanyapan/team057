@@ -4,7 +4,7 @@
 
 Welcome to the **Arise Loan Pre-Approval/Pre-Qualification System (ArisePreQ)** challenge. Your task is to design and implement a small-scale system that allows users to submit loan applications and receive instant pre-qualification decisions — **with both frontend and backend** by using the technologies and practices we use in our organization.
 
-You have **19 - 22 July 2025** to complete this challenge, and it will be evaluated based on your ability to deliver a functional software solution that meets the requirements outlined below.
+You have **19 - 23 July 2025** to complete this challenge, and it will be evaluated based on your ability to deliver a functional software solution that meets the requirements outlined below.
 
 ## 🧠 Learning Objectives
 

@@ -152,6 +152,7 @@ While we may not have access to a full cloud environment, this challenge provide
 - Ensure proper error handling  base on your justment including UI bahavior
 - Any additional components or configurations needed for your implementation should be documented thoroughly in the [NOTE.md System note](./NOTE.md#system-note) section.
 - you can run `make help` to see all available commands
+- You may have trouble connecting your frontend and backend in the local Kubernetes cluster. For this challenge, it's fine as long as you can get all parts working together within your local machine's Kubernetes environment.
 
 ### Example webpage
 The UI design is flexible - feel free to create your own interface that effectively serves the loan application process. Below are some example layouts you might consider, but you're not required to follow these specific designs: [UI examples](#ui-examples)

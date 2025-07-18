@@ -111,6 +111,6 @@ load-web-test:
 	@k6 run k6/06-frontend-web.average.test.js --env FRONTEND_URL=http://localhost:30080
 
 .PHONY: validate-payload-test
-test-validate-payload:
+validate-payload-test:
 	@echo "Running test validate payload..."
 	@k6 run k6/05-api-apply-loans.validation.test.js --env BASE_URL=http://localhost:30090  --vus 1 --iterations 1

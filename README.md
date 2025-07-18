@@ -56,6 +56,7 @@ While we may not have access to a full cloud environment, this challenge provide
 
 - [ ] We will use colima kubernetes as the environment to check your solution
 - [ ] We will verify that all git commits are [signed using GPG](https://dev.to/anuchito/kaar-sign-gpg-kab-git-commit-3i5f) with your personal key (it must be green)
+- [ ] we will checkout code on `main` branch only
 - [ ] Your application must be deployable to a colima kubernetes cluster
 - [ ] We will run `make k8s-deploy` to deploy your application to colima kubernetes
 - [ ] Ensure all components (frontend, backend, database or any cached) are properly configured to work in this environment
@@ -75,6 +76,7 @@ While we may not have access to a full cloud environment, this challenge provide
 
 - All available commands **MUST** be added to the *Makefile* at the root folder
 - All git commits **MUST** be [signed using GPG](https://dev.to/anuchito/kaar-sign-gpg-kab-git-commit-3i5f)
+- You can have as much git branch as you like but **MUST** merge code into `main` branch before challenge end because we will checkout code on `main` branch only
 - Backend:
     - Backend **MUST** have some tests (e.g. unit test, integration test)
     - Test coverage for backend **MUST** exceed 80%

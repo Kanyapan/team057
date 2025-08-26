@@ -1,13 +1,12 @@
-package com.arise.service;
+package com.arise.loanApplication.service;
 
-import com.arise.model.LoanApplicationEntity;
-import com.arise.repository.LoanApplicationRepository;
-import com.arise.service.LoanApplicationService;
+import com.arise.loanApplication.model.LoanApplicationEntity;
+import com.arise.loanApplication.repository.LoanApplicationRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -16,8 +15,8 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
     private final LoanApplicationRepository repository;
 
     @Override
-    public List<LoanApplicationEntity> findAll() {
-        return repository.findAll();
+    public Page<LoanApplicationEntity> findAll(Pageable pageable,Boolean eligible,String purpose) {
+        return repository.findAllPagination(pageable,eligible,purpose);
     }
 
     @Override
@@ -28,7 +27,7 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
 
     @Override
     public LoanApplicationEntity create(LoanApplicationEntity entity) {
-        entity.setId(null); // ให้ JPA สร้าง id ใหม่
+        entity.setId(null);
         return repository.save(entity);
     }
 

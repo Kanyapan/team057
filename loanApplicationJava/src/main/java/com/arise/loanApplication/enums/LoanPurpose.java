@@ -1,4 +1,4 @@
-package com.arise.enums;
+package com.arise.loanApplication.enums;
 
 public enum LoanPurpose {
     HOME,        // ซื้อบ้าน

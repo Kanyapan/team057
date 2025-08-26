@@ -1,6 +1,6 @@
-package com.arise.model;
+package com.arise.loanApplication.model;
 
-import com.arise.enums.LoanPurpose;
+import com.arise.loanApplication.enums.LoanPurpose;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;

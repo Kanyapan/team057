@@ -1,4 +1,4 @@
-package com.demo.loanApplication;
+package com.arise.loanApplication;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

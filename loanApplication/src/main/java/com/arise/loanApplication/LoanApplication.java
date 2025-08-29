@@ -1,6 +1,5 @@
-package com.demo.loanApplication;
+package com.arise.loanApplication;
 
-import com.demo.loanApplication.enums.LoanPurpose;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,8 +8,6 @@ public class LoanApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LoanApplication.class, args);
-
-        System.out.println(LoanPurpose.CAR);
 	}
 
 }

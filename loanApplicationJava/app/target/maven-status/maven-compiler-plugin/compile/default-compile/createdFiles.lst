@@ -1,9 +1,0 @@
-com\arise\loanApplication\LoanApplication.class
-com\arise\loanApplication\controller\LoanApplicationController.class
-com\arise\loanApplication\service\LoanApplicationServiceImpl.class
-com\arise\loanApplication\model\LoanApplicationEntity.class
-com\arise\loanApplication\enums\LoanPurpose.class
-com\arise\loanApplication\repository\LoanApplicationRepository.class
-com\arise\loanApplication\service\LoanApplicationService.class
-com\arise\loanApplication\model\LoanApplicationEntity$LoanApplicationEntityBuilder.class
-com\arise\loanApplication\model\LoansResponse.class

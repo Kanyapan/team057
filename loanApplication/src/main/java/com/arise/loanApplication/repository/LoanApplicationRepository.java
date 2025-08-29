@@ -1,0 +1,7 @@
+package com.arise.loanApplication.repository;
+
+import com.arise.loanApplication.entity.LoanApplication;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LoanApplicationRepository extends JpaRepository<LoanApplication,Long> {
+}

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.net.http.HttpResponse;
+import java.util.List;
 
 @RestController
 @RequestMapping("api/v1")
@@ -16,9 +17,9 @@ import java.net.http.HttpResponse;
 public class LoanApplicationController {
     private final LoanApplicationService loanApplicationService;
     @GetMapping("/loans")
-    public ResponseEntity findAll(){
-        LoanApplicationEntity loanApplicationEntity = new LoanApplicationEntity();
-        return ResponseEntity.status(428).build();
+    public ResponseEntity<List<LoanApplicationEntity>> findAll(){
+        List<LoanApplicationEntity> loans = loanApplicationService.findAll();
+        return ResponseEntity.ok(loans);
     }
 
 }

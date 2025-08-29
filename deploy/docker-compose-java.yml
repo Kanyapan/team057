@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: ../loanApplication
+      dockerfile: Dockerfile
+    container_name: java_app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres_db:5432/appdb
+      SPRING_DATASOURCE_USERNAME: appuser
+      SPRING_DATASOURCE_PASSWORD: secret
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SERVER_PORT: 8081
+      JAVA_TOOL_OPTIONS: -XX:+UseG1GC -XX:MaxRAMPercentage=75.0
+    ports:
+      - "8081:8081"
+    networks:
+      - backend
+
+networks:
+  backend:
+    external: true
+    name: app_network

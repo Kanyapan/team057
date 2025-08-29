@@ -11,9 +11,9 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class LoanApplicationService {
-//    private final LoanApplicationRepository loanApplicationRepository;
-//
-//    public List<LoanApplicationEntity> findAll(){
-//      return   loanApplicationRepository.findAll();
-//    }
+    private final LoanApplicationRepository loanApplicationRepository;
+
+    public List<LoanApplicationEntity> findAll(){
+      return   loanApplicationRepository.findAll();
+    }
 }

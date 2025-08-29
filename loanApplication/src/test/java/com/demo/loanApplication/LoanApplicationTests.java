@@ -1,4 +1,4 @@
-package com.test.loanApplication;
+package com.demo.loanApplication;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
